@@ -560,7 +560,7 @@ footer{
 
 }
 /*Configuraciones para moviles*/ 
-@media only screen and (max-width: 485px) {
+@media only screen and (max-width: 685px) {
   #nombres{
    width: 40%;
    transform: translate(+30%, -50%);
