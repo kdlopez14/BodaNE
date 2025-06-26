@@ -1,0 +1,170 @@
+main{
+    min-width: 100%;
+}
+.centro{
+    text-align: center;
+}
+/*Fondo formulario*/
+/* 1. Prepara la sección para el pseudo-elemento */
+#fondoFormulario {
+  position: relative;
+  overflow: hidden;         /* recorta el desenfoque al tamaño de la sección */
+  padding: 250px;
+}
+/* 2. Capa difuminada detrás */
+#fondoFormulario::before {
+  content: "";
+  position: absolute;
+  inset: 0; /* top:0; right:0; bottom:0; left:0; */
+  background: url("../imagenes/asistencia/cartas.jpeg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  filter: blur(3px);            /* ajusta el nivel de desenfoque */
+  transform: scale(1.05);       /* escala un poquito para evitar bordes «vacíos» */
+  z-index: 0;                   /* detrás de todo el contenido */
+}
+/* 3. Asegura que el contenido quede por encima */
+#fondoFormulario > .bordeRound {
+  position: relative;
+  z-index: 1;
+  background: rgba(255,255,255,0.8);
+  padding: 2rem;
+  border-radius: .5rem;
+}
+/*Formulario*/
+#tituloAsistencia{
+    color: #8b6608;
+}
+#asistencia{
+    width: 50%;
+    margin: 0px auto;
+    background-color:#00011f ;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 0px 7px #8b6608c2;
+}
+#formulario{
+    margin: 0px auto;
+}
+.input{
+    width: 250px;
+    padding: 4px;
+    margin: 15px 5px;
+}
+#numInvitados{
+    width: 150px;
+    padding: 4px;
+    margin: 15px 5px;
+}
+.radio{
+    margin: 15px 5px;
+}
+#alergenos{
+    margin-top: 15px;
+    width: 75%;
+    display: grid;
+    grid-template-columns: 40% 55% ;
+    grid-template-rows: 16.6% 16.6% 16.6% 16.6% 16.6% 16.6% ;
+}
+
+.checkbox{
+    margin: 10px 5px;
+}
+.inline{
+    display: inline;
+}
+label{
+    font-family:"Radley", serif;
+}
+#botonEnviar{
+    margin: 20px 100px;
+    padding: 8px 15px;
+    border: none;
+    background-color:#8b6608c2;
+    color: black;
+    font-family:"Radley", serif;
+    font-size: 15px;
+    box-shadow: 0px 0px 7px #8b6608c2;
+}
+#botonEnviar:hover{
+    cursor: pointer;
+}
+#botonEnviar:active{
+    transform: scale(0.95);
+}
+.oculto{
+    display: none;
+}
+/*SMALL*/
+small{
+   min-height: 1.2rem; /* o el alto estimado cuando hay mensaje de error */
+   width: 330px;
+   display: none;
+   color: red;
+}
+/*Casilla error */
+.formSucces input{
+   border-color:#8b6608;
+}
+.formError input{
+   border-color: red;
+}
+.formError small{
+   display: block;
+}
+#cubierto{
+    min-height: 1.2rem; /* o el alto estimado cuando hay mensaje de error */
+    width: 350px;
+    color: rgb(216, 151, 31);
+}
+
+/*Configuraciones para tablets*/ 
+
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+#menuNav{
+    left: 230px;
+  }
+#fondoFormulario{
+    padding: 230px 140px;
+}
+#asistencia{
+    width: 100%;
+}
+ #alergenos{
+    grid-template-columns: 40% 60% ;
+    grid-template-rows: 16.6% 16.6% 16.6% 16.6% 16.6% 16.6% ;
+ }
+ #logo{
+    margin: 0px 50px;
+  } 
+}
+/*Configuraciones para moviles*/ 
+@media only screen and (max-width: 485px) {
+  #menuNav{
+    left: 110px;
+  }
+  #fondoFormulario{
+    padding: 250px 50px;
+  }
+    #asistencia{
+    width: 100%;
+  }
+  #logo{
+    margin: 0px 10px;
+  } 
+  .redesSociales{
+    display: grid;
+    grid-template-columns: 50% 20%;
+    grid-template-rows: auto auto auto;
+    gap: 7px;
+    }
+ .input{
+    display: grid;
+    grid-template-columns: auto auto;
+ }
+ #cubierto, small {
+    width: 280px;
+ }
+}

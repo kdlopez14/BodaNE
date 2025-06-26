@@ -1,0 +1,590 @@
+* {
+   margin: 0;
+   padding: 0;
+   /*Le indicamos que no redimensione los bloques, que no supere su anchura y altura
+       aunque le añadamos margenes o paddings. Siempre que esten dentro del tamaño definido del bloque*/
+   box-sizing: border-box;
+}
+
+  .oculto{
+    display: none;
+  }
+body{
+    max-width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas: 
+    "header"
+    "main"
+    "footer"
+    ;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+p{
+    font-size: 15px;
+}
+header{
+    grid-area:header;
+}
+#header-index{
+    max-width: 100%;
+    height: 700px;
+    border-radius: 10px;
+    background-image: url('../imagenes/asistencia/fondo.jpg');
+    background-position: center;
+    background-size: cover;
+}
+/*Animaciones*/
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+} 
+@keyframes animacionLateral {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity:1;
+    }
+}
+main{
+    max-width: 100%;
+    grid-area:main;
+}
+.fondo-fijo{
+    background-image: url(../imagenes/fondoBody1.png);
+    background-size: contain;
+    background-position: bottom;
+}
+/*Bordes recondeados*/
+.bordeRound{
+    border-radius: 20px;
+} 
+/*Menú de Navegación*/
+#barraNav{
+    width: 100%;
+    height: 50px;
+    position: absolute;
+    z-index: 9;
+}
+#barraNav:hover{
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px); /* soporte Safari */
+}
+#menuNav{
+    width: 30%;
+    position: absolute;
+    left: 700px;
+    top: 5px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    list-style: none;
+    text-align: center;
+    gap: 10px;
+    z-index: 8;
+}
+#menuNav a{
+    color: rgb(248, 248, 248);
+}
+#menuNav li{
+    padding: 8px;
+    font-family:"Radley", serif;
+    font-size: 20px;
+}
+#menuNav li:hover{
+    text-decoration: underline;
+    color: rgb(248, 248, 248);
+}
+.img{
+    width: 100%;
+    height: 100%;
+}
+/*Nos casamos y cuenta atrás*/
+#nombres{
+   width: 15%; 
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, +300%);
+   color: #FFFFF0;
+   font-size: 18px;
+   text-align: center;
+   animation: animacionLateral 2.5s ease ;
+}
+#titulo{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, +100%);
+    color: #FFFFF0;
+    text-shadow: 0px 0px 5px #050a9c;
+    animation: animacionLateral 2.5s ease ;
+}
+h1{
+    font-family: "Pinyon Script", cursive;
+    font-size: 50px;
+    font-weight: 100;
+}
+#verDetalles{
+    width: 85%;
+    margin-top: 10px;
+    padding: 5px 10px;
+    font-size: 16px;
+    background-color:rgba(0, 1, 31,0.7);
+    border: none;
+    box-shadow: 0px 0px 8px rgba(255, 255, 255,0.6);
+}
+#verDetalles:hover {
+    cursor: pointer;
+    background-color:#00011fcc;
+}
+#verDetalles:active {
+    transform: scale(0.95);
+}
+#verDetalles a{
+    text-decoration: none;
+    color: #FFFFF0;
+}
+/*Texto de Bienvenida*/
+#bienvenida{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color:#00011f;
+    color: #FFFFF0;
+    padding: 50px;
+}
+#anillos{
+    width: 10%;
+    height: 10%;
+}
+#textoBienvenida{
+    width: 50%;
+    margin-bottom: 60px;
+    text-align: center;
+    margin-bottom: 150px;
+    line-height: 20px;
+}
+#imagenes{
+    margin: 0px auto;
+    width: 70%;
+    display: grid;
+    grid-template-columns: 33.3% 33.3% 33.3%;   
+    gap:20px;
+}
+#fotoCentro{
+   position: relative;
+    top: -70px;
+    border: 9px double #8b6608;
+}
+.fotoLateral{
+    position: relative;
+    top: -25px;
+    border: 9px double #8b6608;
+}
+#fondoImagenes{
+    background-color:  #ffffff;
+}
+#relojCuentaAtras{
+    position: relative;
+    width: 100%;
+    background-image: url(../imagenes/pexels-n-voitkevich-4641864.jpg);
+    background-size: cover;
+    background-position: top;
+    height: 400px;
+}
+#cuentaAtras{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 50px;
+    color:#00011f;
+    font-family: "Pinyon Script", cursive;
+}
+#info{
+    background-color:  #ffffff;
+    display: grid;
+    grid-template-rows: auto auto auto;
+    padding: 100px;
+}
+.textoFoto{
+    width: 80%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    margin: 0px auto;
+    align-items: center;
+    gap: 60px;
+}
+.texto{
+    text-align: justify; 
+    padding: 40px;
+    line-height: 20px;
+}
+#fotoIglesia{
+    height: 80%;
+}
+h4{
+    color: #00011f;
+    text-align: center;
+    font-size: 50px;
+    font-family: "Tangerine", cursive; 
+}
+span{
+    font-weight: bold;
+}
+#fotoCoctel, #fotoCoctelTablet{
+    width: 70%;
+    height: 80%;
+    margin: 0px auto;
+    clip-path: ellipse(50% 50% at center);
+}
+.linea{
+    width: 300px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    position: relative;
+    right: -120px;
+    color: #00011f;
+}
+#fotoCena{
+    border-radius: 20px;
+}
+#fecha{
+    border-top: 1px solid #00011f;
+}
+#fechaBoda{
+    height: 250px;
+    margin: 0px auto;
+}
+#cronologia{
+    width: 550px;
+    height: 1250px;
+    margin: 0px auto;
+}
+/*Dress code*/
+
+#dressCode{
+    padding: 40px;
+    width: 800px;
+    margin: 0px auto;
+}
+#tiDressCode{
+    font-family:"Radley", serif;
+    font-size: 40px;
+    margin: 20px auto;
+    text-align: center;
+     color:  #8b6608;
+}
+#dressCode p {
+    text-align: justify;
+}
+
+/*Ubicaciones*/
+#divUbi{
+    width: 70%;
+    margin: 100px auto;
+    background-color: rgba(1, 3, 44,0.95);
+    padding: 40px;
+    color: #FFFFF0;
+}
+#menuUbi{
+    display: flex;
+}
+#titUbi{
+    color:  #8b6608;
+     font-size: 50px;
+    font-family: "Tangerine", cursive; 
+}
+#listaUbi{
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: center;
+    margin: 0px auto;
+    list-style: none;
+    gap: 65px;
+}
+#listaUbi li {
+     margin-bottom: 80px;
+}
+#listaUbi li button{
+    border: none;
+    padding: 12px;
+    background-color: #FFFFF0;
+    font-size: 18px;
+    font-family: "Radley", serif;
+}
+.selected{
+    color:#8b6608;
+    transform: scale(0.95);
+}
+#listaUbi li button:hover{
+    cursor: pointer;
+    text-decoration: underline;
+    color: #8b6608;
+}
+#textoFotoUbi{
+    width: 90%;
+    display: grid;
+    grid-template-columns: 40% 50%;
+    grid-template-rows: 350px;
+    margin: 0px auto;
+    gap: 100px;
+}
+#divTexto{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+a{
+    text-decoration: none;
+}
+.eUbi{
+     color: #8b6608;
+}
+.eUbi:hover{
+    text-decoration: underline;
+}
+h6{
+    color:  #8b6608;
+    font-size: 40px;
+    font-family: "Tangerine", cursive; 
+}
+/*Momentos Únicos*/
+#fotos{
+    position: relative;
+    background-color:  #ffffff;
+    padding: 50px 10px;
+}
+#fondoFotos{
+    width: 95%;
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: 500px;
+    gap: 20px;
+    filter: opacity(0.4);
+    z-index: 5;
+}
+#fondoFotos div img{
+    border-radius: 15px;
+}
+#momentosUnicos{
+    position: absolute;
+    top:50%;
+    left: 50%;
+    translate: -50% -50%;
+    width: 750px;
+    margin: 0px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;   
+    padding: 40px;
+    text-align: center;
+    z-index: 6;
+}
+#momentosUnicos p {
+    margin-bottom: 30px;
+    font-size: 20px;
+    font-family:"Radley", serif;
+}
+#momentosUnicos button{
+    background-color: #ffffff;
+    width: 200px;
+    padding: 7px;
+    border-radius: 10px;
+    border: none;
+}
+#momentosUnicos button:hover{
+    box-shadow: 0 0 15px#ffb6c1, 0 0 20px #8b6608;
+  transform: scale(1.05);
+  transition: all 0.3s ease;
+}
+#momentosUnicos button a{
+    font-size: 17px;
+    color: #8b6608;
+}
+#momentosUnicos:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px); /* soporte Safari */
+}
+.fto{
+    opacity: 0;
+    animation: efectoFotos 2s ease forwards;
+}
+#f1{
+    animation-delay: 1s;
+}
+#f2{
+    animation-delay: 3s;
+}
+#f3{
+    animation-delay: 4s;
+}
+#f4{
+    animation-delay: 5s;
+}
+.fto.activa{
+  display: block;
+  opacity: 1;
+}
+  
+/*Efectos Especiales*/
+@keyframes efectoFotos {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+} 
+/*Footer*/
+footer{
+    height: 250px;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    grid-area: "footer";
+    background-color: #01032c;
+    color: #FFFFF0;
+    filter: opacity(07);
+    padding: 55px 0px;
+}
+#logo{
+    position: relative;
+    top: -40px;
+    width: 200px;
+    height: 200px;
+    margin: 0px 100px;
+    background-image: url(../imagenes/bde50963-9bb0-41a0-aa1d-4844007af78c.png);
+    background-size: cover;
+}
+#textoFooter{
+    font-size: 40px;
+    font-family: "Tangerine", cursive; 
+}
+.redesSociales{
+    display: grid;
+    grid-template-columns: 40% 20%;
+    grid-template-rows: auto auto auto;
+    gap: 7px;
+}
+.logosRedes{
+    width: 25px;
+    height: 25px;
+}
+.redesSociales a {
+    color: #FFFFF0;
+}
+/*Configuraciones para tablets*/ 
+
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+  #menuNav{
+    left: 280px;
+  }
+  #info{
+    padding: 80px 0px;
+  }
+  #nombres{
+   width: 30%;
+   transform: translate(-40%, -50%);
+  }
+  #titulo{
+    transform: translate(-40%, -150%);
+  }
+  #verDetalles{
+    width: 100%;
+  }
+  #anillos{
+    width: 25%;
+    height: 25%;
+ }
+  #textoBienvenida{
+    width: 90%;
+    margin-bottom: 60px;
+    text-align: center;
+    margin-bottom: 150px;
+    line-height: 20px;
+ }
+ #imagenes{
+    width: 85%;
+ }
+ .textoFoto{
+    width: 80%;
+    grid-template-columns: auto;
+    grid-template-rows: 40% 60%;
+    gap: 20px;
+ }
+.texto{
+    padding: 10px;
+}
+.linea{
+    right: -170px;
+}
+#fotoCoctel {
+    display: none;
+}
+#fotoCoctelTablet {
+    width: 60%;
+    height: 80%;
+    display: block;
+    margin-bottom: 100px;
+}
+#divUbi{
+    width: 95%;
+}
+#textoFotoUbi {
+    grid-template-columns: auto;
+    grid-template-rows: 10% 70%;
+
+}
+footer{
+    grid-template-columns: auto auto auto ; 
+}
+#nicolasEstefania{
+    display: none;
+}
+#separador{
+    display: none;
+}
+
+
+}
+/*Configuraciones para moviles*/ 
+@media only screen and (max-width: 485px) {
+  #nombres{
+   width: 40%;
+   transform: translate(+30%, -50%);
+  }
+  #titulo{
+    transform: translate(+20%,-150%);
+  }
+  h1{
+    font-size: 45px;
+  }
+  #fondoFotos{
+    margin: 0px auto;
+    width: 95%;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 800px;
+ }
+  .fto{
+    display: none;
+    animation: none;
+  }
+  .fto.activa{
+  display: block;
+  opacity: 1;
+}
+}
+
