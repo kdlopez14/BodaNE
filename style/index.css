@@ -588,9 +588,11 @@ footer{
   }
   #titulo{
     transform: translate(-50%, -150%);
+    font-size: 7vw;
   }
  #verDetalles{
     width: 40%;
+    font-size: 4vw;
  }
  #header-index{
     height: 500px;
