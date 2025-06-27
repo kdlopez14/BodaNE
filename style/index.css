@@ -290,9 +290,7 @@ span{
 #dressCode p {
     text-align: justify;
 }
-
 /*Ubicaciones*/
-
 #divUbi{
     width: 70%;
     margin: 100px auto;
@@ -325,6 +323,7 @@ span{
     background-color: #FFFFF0;
     font-size: 18px;
     font-family: "Radley", serif;
+    color:#8b6608;
 }
 .selected{
     color:#8b6608;
@@ -593,8 +592,12 @@ footer{
  }
  #bienvenida{
     padding: 0px;
-    padding: 20px;
+    padding: 30px;
  }
+ /*Fecha Boda*/
+  #fechaBoda{
+    margin-bottom: 20px;
+  }
   /*Fotos 3 Nicolas Estefania*/
   #imagenes{
     width: 80%;
@@ -609,6 +612,7 @@ footer{
  .linea{
     width: 100%;
     left: 0px;
+    color: #00011f;
 }
   .fto{
     display: none;
@@ -623,7 +627,7 @@ footer{
     height: 250px;
   }
   #cuentaAtras{
-    font-size: 28px;
+    font-size: 25px;
   }
   /*Información del evento*/
   #fotoCoctelTablet {
@@ -636,7 +640,6 @@ footer{
         display: flex;
         flex-direction: column;
         align-items: center;
-        
     }
     #listaUbi li {
      margin: 20px auto;
