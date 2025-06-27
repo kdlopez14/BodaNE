@@ -4,7 +4,6 @@
    /*Le indicamos que no redimensione los bloques, que no supere su anchura y altura
        aunque le añadamos margenes o paddings. Siempre que esten dentro del tamaño definido del bloque*/
    box-sizing: border-box;
-   outline: 1px solid red; /* Esto te ayuda a ver qué elementos están ocupando más espacio */
 }
 section{
     max-width: 100%;
@@ -287,6 +286,7 @@ span{
     text-align: center;
      color:  #8b6608;
 }
+
 #dressCode p {
     text-align: justify;
 }
@@ -381,6 +381,13 @@ h6{
 }
 #fondoFotos div img{
     border-radius: 15px;
+}
+#titMU{
+    font-family:"Radley", serif;
+    font-size: 40px;
+    margin: 20px auto;
+    text-align: center;
+    color:  #8b6608;
 }
 #momentosUnicos{
     position: absolute;
@@ -567,9 +574,11 @@ footer{
     left: 100px;
   }
   #nombres{
-    width: 40%;
+    width: 70%;
   }
- 
+ #verDetalles{
+    width: 70%;
+ }
  #header-index{
     height: 500px;
  }
@@ -616,6 +625,12 @@ footer{
   #cuentaAtras{
     font-size: 28px;
   }
+  /*Información del evento*/
+  #fotoCoctelTablet {
+    width: 60%;
+    height: 70%;
+    display: block;
+    }
 /*Ubicaciones*/
     #menuUbi{
         display: flex;
@@ -642,6 +657,9 @@ footer{
     }
     #momentosUnicos button{
     width: 60%;
+    }
+    #titMU{
+        font-size: 30px;
     }
 /*Footer*/
 footer{
