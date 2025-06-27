@@ -274,9 +274,7 @@ span{
     height: 250px;
     margin: 0px auto;
 }
-
 /*Dress code*/
-
 #dressCode{
     padding: 40px;
     max-width: 100%;
@@ -493,7 +491,7 @@ footer{
 }
 /*Configuraciones para tablets*/ 
 
-@media only screen and (min-width: 481px) and (max-width: 768px) {
+@media only screen and (max-width: 768px) {
   #menuNav{
     left: 280px;
   }
