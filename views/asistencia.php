@@ -1,22 +1,18 @@
 <?php   session_start(); ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
+    <meta name="description" content="Confirmar Asistencia"> 
+    <meta name="author" content="Daniela López">
+    <meta name="robots" content="noindex, follow">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../style/index.css">
     <link rel="stylesheet" href="../style/asistencia.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Pinyon+Script&family=Ponomar&display=swap"
-        rel="stylesheet">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Pinyon+Script&family=Ponomar&family=Tangerine:wght@400;700&display=swap"
-        rel="stylesheet">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Pinyon+Script&family=Ponomar&family=Radley:ital@0;1&family=Tangerine:wght@400;700&display=swap"
-        rel="stylesheet">
-    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Pinyon+Script&family=Ponomar&family=Radley:ital@0;1&family=Tangerine:wght@400;700&display=swap" rel="stylesheet">
+    <title>Asistencia</title>
 </head>
 <body>
     <!--<php include_once ("php/header.php"); ?>-->

@@ -4,11 +4,14 @@
    /*Le indicamos que no redimensione los bloques, que no supere su anchura y altura
        aunque le añadamos margenes o paddings. Siempre que esten dentro del tamaño definido del bloque*/
    box-sizing: border-box;
+   outline: 1px solid red; /* Esto te ayuda a ver qué elementos están ocupando más espacio */
 }
-
-  .oculto{
+section{
+    max-width: 100%;
+}
+.oculto{
     display: none;
-  }
+}
 body{
     max-width: 100%;
     height: 100%;
@@ -60,6 +63,7 @@ main{
     grid-area:main;
 }
 .fondo-fijo{
+    max-width: 100%;
     background-image: url(../imagenes/fondoBody1.png);
     background-size: contain;
     background-position: bottom;
@@ -156,6 +160,7 @@ h1{
 }
 /*Texto de Bienvenida*/
 #bienvenida{
+    width: 100%;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -176,6 +181,7 @@ h1{
     line-height: 20px;
 }
 #imagenes{
+    max-width: 100%;
     margin: 0px auto;
     width: 70%;
     display: grid;
@@ -213,6 +219,7 @@ h1{
     font-family: "Pinyon Script", cursive;
 }
 #info{
+    max-width: 100%;
     background-color:  #ffffff;
     display: grid;
     grid-template-rows: auto auto auto;
@@ -232,7 +239,7 @@ h1{
     line-height: 20px;
 }
 #fotoIglesia{
-    height: 80%;
+    width: 100%;
 }
 h4{
     color: #00011f;
@@ -267,16 +274,12 @@ span{
     height: 250px;
     margin: 0px auto;
 }
-#cronologia{
-    width: 550px;
-    height: 1250px;
-    margin: 0px auto;
-}
+
 /*Dress code*/
 
 #dressCode{
     padding: 40px;
-    width: 800px;
+    max-width: 100%;
     margin: 0px auto;
 }
 #tiDressCode{
@@ -291,6 +294,7 @@ span{
 }
 
 /*Ubicaciones*/
+
 #divUbi{
     width: 70%;
     margin: 100px auto;
@@ -327,6 +331,8 @@ span{
 .selected{
     color:#8b6608;
     transform: scale(0.95);
+    transition: transform 0.3s ease, color 0.3s ease;
+    display: inline-block; /* Asegura que transform funcione */
 }
 #listaUbi li button:hover{
     cursor: pointer;
@@ -383,7 +389,7 @@ h6{
     top:50%;
     left: 50%;
     translate: -50% -50%;
-    width: 750px;
+    width: 40%;
     margin: 0px auto;
     display: flex;
     flex-direction: column;
@@ -399,7 +405,7 @@ h6{
 }
 #momentosUnicos button{
     background-color: #ffffff;
-    width: 200px;
+    width: 30%;
     padding: 7px;
     border-radius: 10px;
     border: none;
@@ -453,7 +459,7 @@ footer{
     height: 250px;
     display: grid;
     grid-template-columns: auto auto auto auto auto;
-    grid-area: "footer";
+    grid-area: footer;
     background-color: #01032c;
     color: #FFFFF0;
     filter: opacity(07);
@@ -545,7 +551,6 @@ footer{
 #textoFotoUbi {
     grid-template-columns: auto;
     grid-template-rows: 10% 70%;
-
 }
 footer{
     grid-template-columns: auto auto auto ; 
@@ -557,27 +562,47 @@ footer{
     display: none;
 }
 
-
 }
-/*Configuraciones para moviles*/ 
-@media only screen and (max-width: 685px) {
+/*Configuraciones para moviles */
+@media only screen and (max-width: 485px) {
+  #menuNav{
+    left: 100px;
+  }
   #nombres{
-   width: 40%;
-   transform: translate(+30%, -50%);
+    width: 40%;
   }
-  #titulo{
-    transform: translate(+20%,-150%);
-  }
+ 
+ #header-index{
+    height: 500px;
+ }
   h1{
     font-size: 45px;
   }
-  #fondoFotos{
-    margin: 0px auto;
-    width: 95%;
-    display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: 800px;
+  /*Anillos Foto*/
+  #anillos{
+    width: 40%;
+    height: 40%;
+    margin-bottom: 20px;
  }
+ #bienvenida{
+    padding: 0px;
+    padding: 20px;
+ }
+  /*Fotos 3 Nicolas Estefania*/
+  #imagenes{
+    width: 80%;
+    grid-template-columns: 1fr;   
+    grid-template-rows: 33.3% 33.3% 33.3%; 
+    padding: 30px;
+ }
+ #fotoCentro, .fotoLateral{
+    top: -80px;
+}
+
+ .linea{
+    width: 100%;
+    left: 0px;
+}
   .fto{
     display: none;
     animation: none;
@@ -585,6 +610,57 @@ footer{
   .fto.activa{
   display: block;
   opacity: 1;
+  }
+/*Cuenta Atrás*/
+  #relojCuentaAtras{
+    height: 250px;
+  }
+  #cuentaAtras{
+    font-size: 28px;
+  }
+/*Ubicaciones*/
+    #menuUbi{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+    }
+    #listaUbi li {
+     margin: 20px auto;
+    }
+    #textoFotoUbi{
+     margin-top: 50px;
+    }
+/*Momento Unicos*/
+  #fondoFotos{
+    margin: 0px auto;
+    width: 95%;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 800px;
+ }
+    #momentosUnicos{
+        width: 80%;
+    }
+    #momentosUnicos button{
+    width: 60%;
+    }
+/*Footer*/
+footer{
+    grid-template-columns: 20% 1rf 45%;
 }
+    #logo{
+        width: 150px;
+        height: 150px;
+        margin: 0px 0px;
+        margin-left: 20px;
+        margin-top: 40px;
+    }
+    .redesSociales{
+        display: grid;
+        grid-template-columns: 50% 20%;
+        grid-template-rows: auto auto auto;
+        gap: 7px;
+    }
 }
 
