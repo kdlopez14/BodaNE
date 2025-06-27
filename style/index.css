@@ -574,6 +574,10 @@ footer{
   }
   #nombres{
     width: 70%;
+    transform: translate(-50%, -50%);
+  }
+  #titulo{
+    transform: translate(-50%, -150%);
   }
  #verDetalles{
     width: 70%;
