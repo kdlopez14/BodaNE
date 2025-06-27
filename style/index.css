@@ -382,8 +382,9 @@ h6{
     border-radius: 15px;
 }
 #titMU{
-    font-family:"Radley", serif;
-    font-size: 40px;
+    font-family: "Pinyon Script", cursive;
+    font-size: 60px;
+    font-weight: 100;
     margin: 20px auto;
     text-align: center;
     color:  #8b6608;
@@ -447,6 +448,15 @@ h6{
 .fto.activa{
   display: block;
   opacity: 1;
+}
+
+@keyframes efectoFotosMovil {
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
 }
   
 /*Efectos Especiales*/
@@ -573,14 +583,14 @@ footer{
     left: 100px;
   }
   #nombres{
-    width: 70%;
+    width: 95%;
     transform: translate(-50%, -50%);
   }
   #titulo{
     transform: translate(-50%, -150%);
   }
  #verDetalles{
-    width: 70%;
+    width: 60%;
  }
  #header-index{
     height: 500px;
@@ -612,7 +622,6 @@ footer{
  #fotoCentro, .fotoLateral{
     top: -80px;
 }
-
  .linea{
     width: 100%;
     left: 0px;
@@ -666,7 +675,7 @@ footer{
     width: 60%;
     }
     #titMU{
-        font-size: 30px;
+        font-size: 40px;
     }
 /*Footer*/
 footer{

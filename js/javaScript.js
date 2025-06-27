@@ -58,7 +58,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (window.innerWidth <= 485) {
       console.log("Vista móvil activa:", window.innerWidth);
       if (!intervaloId) {
-        intervaloId = setInterval(mostrarSiguiente, 3000);
+        intervaloId = setInterval(mostrarSiguiente, 4000);
       }
     } else {
       if (intervaloId) {

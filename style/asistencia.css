@@ -167,4 +167,7 @@ small{
  #cubierto, small {
     width: 280px;
  }
+ #numInvitados{
+  width: 60px;
+ }
 }
