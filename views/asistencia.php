@@ -21,7 +21,7 @@
             <nav>
                 <ul id="menuNav">
                     <li><a href="../index.html" title="inicio">Inicio</a></li>
-                    <li><a href="asistencia.html">Asistencia</a></li>
+                    <li><a href="asistencia.php">Asistencia</a></li>
                     <li><a href="../index.html#sectionUbi" title="Ubicaciones del evento">Ubicación</a></li>
                 </ul>
             </nav>
