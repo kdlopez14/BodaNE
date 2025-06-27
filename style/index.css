@@ -583,14 +583,14 @@ footer{
     left: 100px;
   }
   #nombres{
-    width: 95%;
+    width: 100%;
     transform: translate(-50%, -50%);
   }
   #titulo{
     transform: translate(-50%, -150%);
   }
  #verDetalles{
-    width: 60%;
+    width: 40%;
  }
  #header-index{
     height: 500px;
