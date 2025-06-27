@@ -133,7 +133,7 @@
                 <a href="https://www.instagram.com/fany.28.14?igsh=OTZncXB4azRjaTVt" target="_blank">Instagram</a>
                 <div class="logosRedes">
                     <a href="https://www.instagram.com/fany.28.14?igsh=OTZncXB4azRjaTVt" target="_blank"><img
-                            class="img" src="../imagenes/logos/instagram.png" /></a>
+                            class="img" src="../imagenes/logos/instagram.png"   width="40" height="40" /></a>
                 </div>
             </div>
             <div class="redesSociales">
@@ -142,7 +142,7 @@
                 </a>
                 <div class="logosRedes">
                     <a href="https://wa.me/34632078249?text=Hola" target="_blank">
-                        <img class="img" src="../imagenes/logos/whatsapp.png" />
+                        <img class="img" src="../imagenes/logos/whatsapp.png"   width="40" height="40" />
                     </a>
 
                 </div>
@@ -150,7 +150,7 @@
             <div class="redesSociales">
                 <a href="mailto:nicolas_david10@hotmail.com?subject=Hola&body=Quiero%20contactarte">Email</a>
                 <div class="logosRedes">
-                    <img class="img" src="../imagenes/logos/email.png" />
+                    <img class="img" src="../imagenes/logos/email.png"   width="40" height="40"/>
                 </div>
             </div>
         </div>
