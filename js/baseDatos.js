@@ -1,5 +1,6 @@
 import { validado } from "./validacion.js";
 import { validarInputs } from "./validacion.js";
+import { numInvitados } from "./validacion.js";
 document.addEventListener('DOMContentLoaded', ()=>{
     validarInputs();
     numInvitados();
